@@ -11,6 +11,7 @@
 		1DFE58E727C0104E003501F9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DFE58E627C0104E003501F9 /* ContentView.swift */; };
 		1DFE58E927C0104F003501F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1DFE58E827C0104F003501F9 /* Assets.xcassets */; };
 		1DFE58EC27C0104F003501F9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1DFE58EB27C0104F003501F9 /* Preview Assets.xcassets */; };
+		1DFE58F727C0167B003501F9 /* SliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DFE58F627C0167B003501F9 /* SliderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		1DFE58E627C0104E003501F9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		1DFE58E827C0104F003501F9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1DFE58EB27C0104F003501F9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		1DFE58F627C0167B003501F9 /* SliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 			children = (
 				1DFE58E427C0104E003501F9 /* SwiftUI_HW_2App.swift */,
 				1DFE58E627C0104E003501F9 /* ContentView.swift */,
+				1DFE58F627C0167B003501F9 /* SliderView.swift */,
 				1DFE58E827C0104F003501F9 /* Assets.xcassets */,
 				1DFE58EA27C0104F003501F9 /* Preview Content */,
 			);
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1DFE58F727C0167B003501F9 /* SliderView.swift in Sources */,
 				1DFE58E727C0104E003501F9 /* ContentView.swift in Sources */,
 				1DFE58E527C0104E003501F9 /* SwiftUI_HW_2App.swift in Sources */,
 			);
