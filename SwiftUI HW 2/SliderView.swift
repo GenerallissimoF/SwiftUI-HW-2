@@ -2,52 +2,46 @@
 //  SliderView.swift
 //  SwiftUI HW 2
 //
-//  Created by Ivan Adoniev on 18.02.2022.
+//  Created by Ivan Adoniev on 20.02.2022.
 //
 
 import SwiftUI
 
-struct SliderView: View {
+struct SliderValue {
     
-    @State private var sliderValue: Double = 50
-    @State private var text: String = ""
+    var raw: Double
+    var text: String {
+        get {
+            return String(Int(raw))
+        }
+        set {
+            self.raw = Double(newValue)!
+        }
+    }
+}
+
+struct SliderView: View {
+    @Binding var value: SliderValue
+    var color: Color?
     
     var body: some View {
         HStack {
-           
-    //   ??     Slider(value: Double(), in: 0...100)
-            ValueTextField(sliderValue: $sliderValue, textFieldText: $text)
-            
+            TextField("", text: $value.text)
+                .textFieldStyle(RoundedBorderTextFieldStyle())
+                .frame(width: 60, height: 20, alignment: .center)
+                .padding(.all, 10)
+            Slider(value: $value.raw, in: 0...255)
+                .accentColor(color)
+            Text(value.text)
+               
         }
         .padding(4)
     }
-    func checkTextField() -> Double {
-        if let value = Double(text) {
-            sliderValue = value
-            
-        }
-        return sliderValue
-    }
-}
-struct ValueTextField: View {
-    
-    @Binding var sliderValue: Double
-    @Binding var textFieldText: String
-    
-    var body: some View {
-        
-      TextField("", text: $textFieldText)
-    }
-    
-
-       
-    }
-    
-
-
-struct SliderView_Previews: PreviewProvider {
-    static var previews: some View {
-        SliderView()
-    }
 }
 
+
+//struct SliderView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        SliderView(value: SliderValue(raw: 0.0))
+//    }
+//}
