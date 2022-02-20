@@ -8,21 +8,30 @@
 import SwiftUI
 
 struct SliderValue {
-    
+    @State private var alertPresented = false
+    let alert = Alert(title: Text("mmmm"), message: Text("uu"), dismissButton: .cancel())
     var raw: Double
+    
     var text: String {
         get {
             return String(Int(raw))
         }
         set {
-            self.raw = Double(newValue)!
+            if let a = Double(newValue) {
+                self.raw = a
+            } else {
+               print("All is wrong")
+                // что-то не смог придумать как сюда alert запихать
+            }
         }
     }
 }
 
 struct SliderView: View {
     @Binding var value: SliderValue
+   
     var color: Color?
+    
     
     var body: some View {
         HStack {
@@ -37,6 +46,8 @@ struct SliderView: View {
         }
         .padding(4)
     }
+
+   
 }
 
 
